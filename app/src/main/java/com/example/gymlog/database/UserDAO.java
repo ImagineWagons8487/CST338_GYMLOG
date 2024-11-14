@@ -26,4 +26,5 @@ public interface UserDAO {
 
     @Query("SELECT * from " + GymLogDatabase.USER_TABLE + " WHERE username == :username" )
     User getUserByUserName(String username);
+
 }
