@@ -7,4 +7,11 @@
     <string name="reps">Reps</string>
     <string name="enter_reps">Enter Reps</string>
     <string name="log">Log!</string>
+    <string name="nothing_to_show_time_to_hit_the_gym">Nothing to show, time to hit the gym!</string>
+    <string name="login_welcome">Welcome to the GymLog. \n Please sign in.</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login!</string>
+    <string name="preference_file_key">preferenceFileName</string>
+    <string name="preference_userId_key">preferenceUserIdKeyGymLog</string>
 </resources>
