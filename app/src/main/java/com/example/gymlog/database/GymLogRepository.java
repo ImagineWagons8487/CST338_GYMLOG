@@ -49,7 +49,7 @@ public class GymLogRepository {
         return null;
     }
 
-    public ArrayList<GymLog> getAllLogs(){
+    public LiveData<ArrayList<GymLog>> getAllLogs(){
         Future<ArrayList<GymLog>> future = GymLogDatabase.databaseWriteExecutor.submit(
                 new Callable<ArrayList<GymLog>>() {
                     @Override
@@ -86,6 +86,11 @@ public class GymLogRepository {
         return userDAO.getUserByUserId(userId);
     }
 
+    public LiveData<List<GymLog>> getAllLogsByUserIdLiveData(int loggedInUserId){
+        return gymLogDAO.getRecordsByUserIdLiveData(loggedInUserId);
+    }
+
+    @Deprecated
     public ArrayList<GymLog> getAllLogsByUserId(int loggedInUserId) {
         Future<ArrayList<GymLog>> future = GymLogDatabase.databaseWriteExecutor.submit(
                 new Callable<ArrayList<GymLog>>() {
